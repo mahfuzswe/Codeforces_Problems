@@ -1,0 +1,1 @@
+towupper(s[1]);
