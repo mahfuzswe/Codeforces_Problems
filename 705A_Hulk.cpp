@@ -16,7 +16,6 @@ int main()
         else cout<<"it "<<endl;
     }
     
-   
     return 0;
 }
 
