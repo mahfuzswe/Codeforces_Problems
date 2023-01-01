@@ -13,7 +13,7 @@ int main(){
 
 		int mna = *min_element(a.begin(), a.end());
 		int mnb = *min_element(b.begin(), b.end());
-        
+
 		long long ans = 0;
 		for (int i = 0; i < n; ++i) {
 			ans += max(a[i] - mna, b[i] - mnb);
@@ -23,3 +23,7 @@ int main(){
 
     return 0;
 }
+
+
+
+
