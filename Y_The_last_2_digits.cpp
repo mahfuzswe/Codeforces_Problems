@@ -5,10 +5,10 @@ using namespace std;
 int32_t main(){
     int a,b,c,d; cin>>a>>b>>c>>d;
 
-    a %=100;
-    b %=100;
-    c %=100;
-    d %=100;
+    a %= 100;
+    b %= 100;
+    c %= 100;
+    d %= 100;
 
     int tmp = a*b*c*d;
 
