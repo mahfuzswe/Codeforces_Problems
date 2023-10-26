@@ -8,6 +8,5 @@ int main()
     int d = (m*n)/2;
     cout<<d<<endl;
 
-
     return 0;
 }
