@@ -12,25 +12,13 @@
 using namespace std;
         
 void mahfuzswe(){
-    
-    int n,q; cin>>n>>q;
-    int arr[n];
-    for(int i=0; i<n; i++) cin>>arr[i];
-
-    int prefix[n];
-    prefix[0] = arr[0];
-
-    for(int i=1; i<n; i++){
-        prefix[i] = prefix[i-1] + arr[i];
-    }
-
-    while(q--){
-        int l,r; cin>>l>>r;
-        r -= 1;
-        l -= 1;
-        if(l==0) cout<<prefix[r]<<'\n';
-        else cout<<prefix[r]-prefix[l-1]<<'\n';
-    }
+   int t;
+   cin>>t;
+   while(t--){
+     int n; cin>>n;
+     string s; cin>>s;
+     cout<<s.back()<<'\n';
+  }
 }
         
 int32_t main(){
