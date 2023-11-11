@@ -10,21 +10,39 @@
 #define sq(a) (a)*(a)
 #define all(x) x.begin(),x.end()
 using namespace std;
-        
-void mr_phoenix(){
-   int t;
-   cin>>t;
-   while(t--){
-     
+
+
+bool cmp(pair<string, int>&p1, pair<string, int>&p2){
+  if(p1.second > p2.second) return true;
+  else if(p1.second == p2.second){
+    if(p1.first<p2.first){
+      return true;
+    }
+    else return false;
   }
+  else return false;
 }
+
         
 int32_t main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
     
-    mr_phoenix();
+    int n; cin>>n;
+    vector<pair<string, int>>v;
+
+    for(int i=0; i<n; i++){
+      string s; int x; 
+      cin>>s>>x;
+      v.push_back({s,x});
+    }
+
+    sort(v.begin(), v.end(), cmp);
+
+    for(auto x:v){
+      cout<<x.first<<" "<<x.second<<'\n';
+    }
     
     return 0;
 }
