@@ -17,10 +17,10 @@ int main(){
         s.insert(arr[i]);
     }
 
-    if(s.size()==k){
+    if(s.size()>=k){
         cout<<"YES\n";
         auto it = s.begin();
-        for(int i=0; i<s.size(); i++){
+        for(int i=0; i<k; i++){
             int key = *it;
             cout<<linearSearch(arr, n, key)+1<<" ";
             it++;
