@@ -2,10 +2,8 @@
 using namespace std;
 
 int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
 
-    int q,x; cin>>q>>x;
+    int q,x; cin>>q;
     string s;
     set<int>st;
 
@@ -17,22 +15,33 @@ int main(){
         }
         if(s=="find"){
             cin>>x;
-            if(st.find(x) != st.end()) cout<<"found"<<'\n';
-            else cout<<"not found\n";
+            if(st.find(x)!=st.end()){
+                cout<<"found\n";
+            }
+            else{
+                cout<<"not found\n";
+            }
+            // if(st.count(x)>0) cout<<"found\n";
+            // else cout<<"not found\n";
         }
         if(s=="lower_bound"){
             cin>>x;
-            auto it = st.lower_bound(x);
-            if(it != st.end()){
-                cout<< *it <<'\n';
+            auto ans = st.lower_bound(x);
+            if(ans == st.end()){
+                cout<<-1<<'\n';
+            }else{
+                cout<<*ans<<'\n';
             }
         }
         if(s=="upper_bound"){
             cin>>x;
-            auto it = st.upper_bound(x);
-            if(it != st.end()){
-                cout<< *it <<'\n';
+            auto ans = st.upper_bound(x);
+            if(ans == st.end()){
+                cout<<-1<<'\n';
+            }else{
+                cout<<*ans<<'\n';
             }
+            
         }
     }
 
