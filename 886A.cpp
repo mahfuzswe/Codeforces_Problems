@@ -11,26 +11,20 @@
 using namespace std;
 
 
-void mr_phoenix(){
+void mahfuzswe(){
     int t; cin>>t;
     while(t--){
         int a,b,c; cin>>a>>b>>c;
         if((a+b)>=10 || (b+c)>=10 || (c+a)>=10) cout<<"YES\n";
         else cout<<"NO\n"; 
-
     }
 }
 
 int32_t main(){
-
-    // freopen("input.txt", "r", stdin);
-	// freopen("output.txt", "w", stdout);
-
     ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    cin.tie(0); cout.tie(0);
 
-    mr_phoenix();
+    mahfuzswe();
 
     return 0;
 }

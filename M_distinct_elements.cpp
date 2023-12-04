@@ -23,8 +23,7 @@ int32_t main(){
         auto pos = lower_bound(ans.begin(), ans.end(), x)-ans.begin();
         cout<<pos<<" ";
         auto pos1 = upper_bound(ans.begin(), ans.end(), x)-ans.begin();
-        cout<<st.size()-pos1<<'\n';
-        
+        cout<<st.size()-pos1<<'\n';  
     }
 
     return 0;
