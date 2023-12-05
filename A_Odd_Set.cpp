@@ -1,44 +1,22 @@
 #include<bits/stdc++.h>
-#define int long long
-#define double long double
-#define pb(e) push_back(e);
-#define fi first
-#define se second
-#define pii pair<int, int>
-#define mp make_pair
-#define flp(i,a,b) for(int i=a; i<=b; i++)
-#define sq(a) (a)*(a)
-#define all(x) x.begin(),x.end()
 using namespace std;
-        
-int gcd(int a, int b){if(a%b==0) return b; else return gcd(b, a%b);}
-int lcm(int a, int b){return (a*b)/gcd(a,b);}
-        
-void mahfuzswe(){
-   int t;
-   cin>>t;
+
+int main(){
+   int t; cin>>t;
    while(t--){
-     int n; cin>>n;
-     n = 2*n;
-     int arr[n];
-     for(int i = 0; i<n; i++){
-        cin>>arr[i];
-     }
+      int n; cin>>n;
+      
+      int even = 0;
+      int odd = 0;
+      for(int i=0; i<2*n; i++){
+         int x; cin>>x;
+         if(x%2==0) even++;
+         else odd++;
+      }
 
-     sort(arr, arr+n);
-
-     for(int i =0; i<n; i++){
-        cout<<arr[i]<<" ";
-     }
-
-  }
-}
-        
-int32_t main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);	cout.tie(0);
-    
-    mahfuzswe();
-    
-    return 0;
+      if(even == odd) cout<<"Yes\n";
+      else cout<<"No\n";
+   }
+   
+   return 0;
 }
