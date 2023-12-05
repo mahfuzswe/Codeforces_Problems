@@ -1,15 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int linearSearch(char arr[], int n, char target) {
-    for(int i = 0; i < n; i++) {
-        if(arr[i] == target) {
-            return i;
-        }
-    }
-    return -1;
-}
-
 int main(){
     int t; cin>>t;
     while(t--){
@@ -19,9 +10,13 @@ int main(){
             cin>>arr[i];
         }
 
-        char target = '0';
+        bool flag = false;
 
-        if(linearSearch(arr,n,target) != -1) cout<<"YES\n";
+        for(int i=0; i<n; i++){
+            if(arr[i]=='0') flag = true;
+        }
+        
+        if(flag) cout<<"YES\n";
         else cout<<"NO\n";
     }
 
