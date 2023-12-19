@@ -9,7 +9,12 @@ int main(){
         else{
             int cnt = 0;
             for(int i = 11; i <= n; i++){
-                if(i%11 == 0) cnt++;
+                while(i>0){
+                    int r1 = i%10;
+                    int t = r1;
+                    
+                    i = i/10;
+                }
             }
             int ans = 9 + cnt;
             cout << 9+cnt << '\n';
