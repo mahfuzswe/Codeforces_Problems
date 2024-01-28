@@ -7,15 +7,23 @@ int main(){
         int n; cin >> n;
         int arr[n];
 
-        int ans = 0;
-        
         for(int i=0; i<n; i++){
-            if(arr[i] == 0){
-                
-            }
+            cin >> arr[i];
         }
 
-        
+        int cnt = 0;
+        int ans = 0;
+
+        for(int i=0; i<n; i++){
+            while(i<n && arr[i] == 0){
+                cnt++;
+                i++;
+            }
+            if(cnt > ans) ans = cnt;
+            cnt = 0;
+        }
+
+        cout << ans << '\n';
     }
 
     return 0;
