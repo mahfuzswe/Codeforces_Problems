@@ -3,30 +3,26 @@ using namespace std;
 
 int main(){
     int yr; cin >> yr;
-    for(int i = yr+1; i<=9000; i++){
-        set<int>s;
-
-        int ans = i;
-
+    yr++;
+    while(1){
+        int i = yr;
         int four = i%10;
-        s.insert(four);
         i /= 10;
 
         int three = i%10;
-        s.insert(three);
         i /= 10;
 
         int second = i%10;
-        s.insert(second);
         i /= 10;
 
         int first = i;
-        s.insert(first);
 
-        if(s.size() == 4){
-            cout << ans << '\n';
-            break; 
+        if(first != second && first != three && first != four && second != three && second != four && three != four){
+            cout << yr << '\n';
+            return 0;
         }
+
+        yr++;
 
     }
 
