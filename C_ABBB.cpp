@@ -1,4 +1,9 @@
-int t; cin>>t;
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+
+int32_t main(){
+    int t; cin>>t;
     while(t--){
         string s; cin >> s;
         int stk = 0;
@@ -7,6 +12,8 @@ int t; cin>>t;
             if(stk && s[i] == 'B') stk--;
             else stk++;
         }
-
         cout << stk << '\n';
     }
+
+    return 0;
+}
