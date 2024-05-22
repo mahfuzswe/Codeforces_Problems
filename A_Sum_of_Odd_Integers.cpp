@@ -6,8 +6,7 @@ signed main(){
     int t; cin >> t;
     while(t--){
         int n, k; cin >> n >> k;
-        if((n%2 == 1 and k%2 == 1) or (n%2 == 0 and k%2 == 0)) cout << "YES\n";
-        else cout << "NO\n";
+        cout << (k <= n/k and n%2 == k%2 ? "YES\n" : "NO\n"); 
     }
 
     return 0;
