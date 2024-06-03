@@ -17,7 +17,7 @@ signed main(){
             if(arr[i] < arr[i+1]) cntPos++;
             if(arr[i] > arr[i+1]) cntNeg++;
         }
-
+`
         
 
     }
