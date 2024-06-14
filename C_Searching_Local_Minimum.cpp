@@ -4,33 +4,31 @@ using namespace std;
 #define int long long
 
 int n;
-map<int, int> prev_values;
+map<int, int> mp;
 
 int query(int index){
-    //(prev_values.find(index) != prev_values.end())
-    if(prev_vlues.contains(index)){ // C++ 20
-        //its return true if the index is inside the previous values
-        return prev_vlues[index]
-    }
-
-    if(index == 0 || index == n+1){
-        return INF;
-    }
+    if(index == 0 || index == n+1) return INT_MAX;
+    if(mp.contains(index)) return mp[index];
 
     cout << "? " << index << endl;
     int value; cin >> value;
-    return prev_vlues[index] = value;
+    return mp[index] = value;
 }
 
 signed main(){
     cin >> n;
     
-    // cout << "? " << 7 << endl; // output: ? index
-    // int judge_value; cin >> judge_value;
-    // // judge will give you a[index] 
+    // increasing is true
+    // decreasing is false
 
-    
-    int value_at_index_1 = query(1);
+    int l = 0, r = n + 1;
+
+    while(r - l > 1){
+        int m = (l + r) / 2;
+        (query(m) < query(m + 1)) ? (r = m) : (l = m);
+    }
+
+    cout << "! " << r << endl;
 
     return 0;
-}
+}  
