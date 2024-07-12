@@ -3,21 +3,16 @@ using namespace std;
 #define int long long 
 
 signed main(){
-    int customer, total_time, break_time;
-    cin >> customer >> total_time >> break_time;
+    int n, l, a, prev = 0;
+    cin >> n >> l >> a;
 
-    int timeTakem = 0;
-    while(customer--){
-        int ayche, timeLagse;
-        cin >> ayche >> timeLagse;
-
-        timeTakem += timeLagse;
+    int ans = 0;
+    while(n--){
+        int x, y; cin >> x >> y;
+        ans += (x - prev) / a;
+        prev = x + y;
     }
-
-    int timeBaki = total_time - timeTakem;
-    int ans = timeBaki / break_time;
-
-    cout << ans << '\n';
+    cout << ans + (l-prev) / a << '\n';
 
     return 0;
 }
